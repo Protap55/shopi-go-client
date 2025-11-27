@@ -1,4 +1,3 @@
-// src/app/blog/page.jsx
 import Link from "next/link";
 
 export const metadata = {
@@ -63,7 +62,6 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen ">
-      {/* Hero Section */}
       <div className="rounded-b-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-6 text-center">
@@ -76,7 +74,6 @@ export default function BlogPage() {
         </div>
       </div>
 
-      {/* Blog Grid */}
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
           {blogs.map((blog) => (
@@ -86,7 +83,6 @@ export default function BlogPage() {
               className="group block"
             >
               <article className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 overflow-hidden h-full flex flex-col border border-gray-100">
-                {/* Image */}
                 <div className="relative h-64 overflow-hidden bg-gradient-to-b from-gray-100 to-gray-200">
                   <img
                     src={blog.image || "/placeholder.jpg"}
@@ -96,7 +92,6 @@ export default function BlogPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-                  {/* Category Badge */}
                   <div className="absolute bottom-4 left-4">
                     <span className="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-full border border-white/30 shadow-lg">
                       {blog.category}
@@ -104,9 +99,7 @@ export default function BlogPage() {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-8 flex flex-col flex-grow">
-                  {/* Meta Info */}
                   <div className="flex items-center gap-3 text-sm text-gray-500 mb-4">
                     <span className="font-medium text-gray-700">
                       {blog.author}
@@ -119,17 +112,14 @@ export default function BlogPage() {
                     </span>
                   </div>
 
-                  {/* Title */}
                   <h2 className="text-2xl font-extrabold text-gray-800 mb-4 leading-tight group-hover:text-purple-600 transition line-clamp-3">
                     {blog.title}
                   </h2>
 
-                  {/* Longer Description */}
                   <p className="text-gray-600 text-base leading-relaxed mb-6 flex-grow line-clamp-4">
                     {blog.excerpt}
                   </p>
 
-                  {/* Read More Removed - Clean Bottom */}
                   <div className="mt-auto pt-4 border-t border-gray-100">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500 font-medium">
@@ -158,7 +148,6 @@ export default function BlogPage() {
           ))}
         </div>
 
-        {/* Load More */}
         <div className="text-center mt-20">
           <button className="relative cursor-pointer inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-lg px-12 py-5 rounded-2xl hover:scale-105 transition-all shadow-2xl hover:shadow-purple-500/50">
             <span>Load More Articles</span>
