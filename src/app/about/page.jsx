@@ -61,7 +61,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
       <section className="px-6 sm:px-6 lg:px-20 py-16 bg-gray-50 dark:bg-gray-900">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">
           Meet Our Team

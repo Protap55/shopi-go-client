@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "@/Context/AuthContext";
 
 export default function AddProductPage() {
-  const { user, loading } = useContext(AuthContext); // লগইন ইউজার এবং loading state
+  const { user, loading } = useContext(AuthContext);
   const router = useRouter();
 
   const [form, setForm] = useState({
@@ -21,10 +21,9 @@ export default function AddProductPage() {
     rating: 0,
   });
 
-  // Reload-safe private route logic
   useEffect(() => {
     if (!loading && !user) {
-      router.push("/login"); // শুধু তখনই redirect হবে যখন loading false এবং user নেই
+      router.push("/login");
     }
   }, [user, loading, router]);
 
@@ -67,7 +66,6 @@ export default function AddProductPage() {
     }
   };
 
-  // Loading state থাকলে কিছু দেখাবে না
   if (loading) return <div className="text-center mt-20">Loading...</div>;
 
   return (
