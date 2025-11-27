@@ -21,7 +21,7 @@ export default function ManageProductsPage() {
   //  Fetch all products
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:5000/products");
+      const res = await fetch("https://shopigo-server.vercel.app/products");
       const data = await res.json();
       setProducts(data);
       setLoadingProducts(false);
@@ -41,9 +41,12 @@ export default function ManageProductsPage() {
     if (!confirm) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/products/${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `https://shopigo-server.vercel.app/products/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (!res.ok) throw new Error("Delete failed");
 

@@ -40,7 +40,7 @@ export default function AddProductPage() {
         userEmail: user?.email || "unknown@example.com",
       };
 
-      const res = await fetch("http://localhost:5000/products", {
+      const res = await fetch("https://shopigo-server.vercel.app/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

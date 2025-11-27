@@ -11,7 +11,9 @@ export default function ShopPage() {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/products${category ? `?category=${category}` : ""}`
+      `https://shopigo-server.vercel.app/products${
+        category ? `?category=${category}` : ""
+      }`
     )
       .then((res) => res.json())
       .then((data) => {
