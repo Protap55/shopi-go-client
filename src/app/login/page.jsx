@@ -22,7 +22,6 @@ export default function LoginPage() {
     e.preventDefault();
     const { email, password } = formData;
 
-    // ফিল্ড খালি থাকলে
     if (!email || !password) {
       toast.error("Please enter email and password");
       return;
@@ -35,7 +34,7 @@ export default function LoginPage() {
       toast.success("Login successful! Welcome back");
       router.push("/");
     } catch (error) {
-      console.log(error.code); // ডিবাগ করার জন্য (পরে মুছে ফেলতে পারো)
+      console.log(error.code);
 
       if (error.code === "auth/user-not-found") {
         toast.error("No account found with this email");
