@@ -114,7 +114,7 @@ export default function RegisterPage() {
               />
             </div>
 
-            {/* Photo URL (Optional) */}
+            {/* Photo URL */}
             <div className="relative">
               <Camera className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
               <input

@@ -13,12 +13,12 @@ export default function ManageProductsPage() {
   const [products, setProducts] = useState([]);
   const [loadingProducts, setLoadingProducts] = useState(true);
 
-  // 🔐 PROTECTED ROUTE (reload-safe)
+  //  PROTECTED ROUTE
   useEffect(() => {
     if (!loading && !user) router.push("/login");
   }, [user, loading, router]);
 
-  // 🔄 Fetch all products
+  //  Fetch all products
   const fetchProducts = async () => {
     try {
       const res = await fetch("http://localhost:5000/products");
@@ -35,7 +35,7 @@ export default function ManageProductsPage() {
     if (user) fetchProducts();
   }, [user]);
 
-  // ❌ Delete product
+  //  Delete product
   const deleteProduct = async (id) => {
     const confirm = window.confirm("Are you sure you want to delete?");
     if (!confirm) return;
