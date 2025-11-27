@@ -40,7 +40,6 @@ export default function Features() {
             {/* Floating Glow Background */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-400/20 via-purple-500/20 to-pink-500/20 blur-3xl opacity-0 group-hover:opacity-70 transition-opacity duration-1000 -z-10" />
 
-            {/* BIG ICON - এখানে সবচেয়ে বড় করা হয়েছে */}
             <div className="relative mx-auto w-32 h-32 mb-10 flex items-center justify-center">
               {/* Outer Glow Ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-3xl scale-0 group-hover:scale-125 transition-transform duration-700" />

@@ -9,14 +9,14 @@ module.exports = {
     themes: [
       {
         shopigo: {
-          primary: "#4f46e5", // Indigo
-          secondary: "#f59e0b", // Amber
-          accent: "#10b981", // Green
-          neutral: "#1f2937", // Gray
-          "base-100": "#ffffff", // White background
+          primary: "#4f46e5",
+          secondary: "#f59e0b",
+          accent: "#10b981",
+          neutral: "#1f2937",
+          "base-100": "#ffffff",
         },
       },
-      "dark", // optional dark mode
+      "dark",
     ],
   },
 };
