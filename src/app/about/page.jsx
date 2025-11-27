@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
     <main className="space-y-24">
-      {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white py-20 px-6 text-center rounded-b-3xl">
         <h1 className="text-4xl sm:text-5xl font-bold mb-4">About ShopiGo</h1>
         <p className="text-lg sm:text-xl max-w-2xl mx-auto">
@@ -15,7 +15,6 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* Mission Section */}
       <section className="max-w-7xl mx-auto px-6 lg:px-20 py-12 text-center">
         <h2 className="text-3xl font-bold mb-6 text-primary">Our Mission</h2>
         <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
@@ -25,7 +24,6 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* Vision Section */}
       <section className="bg-gray-100 dark:bg-gray-900 py-12 px-6 text-center">
         <h2 className="text-3xl font-bold mb-6 text-primary">Our Vision</h2>
         <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
@@ -35,7 +33,6 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* Values Section */}
       <section className="max-w-7xl mx-auto px-6 lg:px-20 py-20 text-center">
         <h2 className="text-3xl font-bold mb-10 text-primary">
           Our Core Values
@@ -100,19 +97,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
       <section className="bg-blue-600 text-white py-20 text-center rounded-t-3xl px-6">
         <h2 className="text-3xl font-bold mb-4">Ready to Shop?</h2>
         <p className="mb-6 max-w-xl mx-auto">
           Explore our wide range of gadgets and tech products. Join thousands of
           happy customers!
         </p>
-        <a
+        <Link
           href="/shop"
           className="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-xl shadow hover:shadow-lg transition"
         >
           Start Shopping
-        </a>
+        </Link>
       </section>
     </main>
   );
